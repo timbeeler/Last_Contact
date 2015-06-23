@@ -9,7 +9,7 @@
 ## ☠ This script or scripts embedded imply no warranty or safety to files, hardware, or self. Use at your own risk ☠
 
 #User Variables
-FILE="~/Dropbox/tim/Documents/ipv6/lastcontact.txt"
+FILE="/Users/tim/Dropbox/tim/Documents/ipv6/lastcontact.txt"
 
 #Dynamic Variables, do not need to be adjusted
 TIMESTAMP=$(date -j "+%h.%d %H:%M")

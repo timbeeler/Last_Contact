@@ -2,17 +2,23 @@
 
 ## lastcontact
 #
-## This scripts helps me keep track of my Public IP address. The script is a simple call and then logs the resutls. 
+## This scripts helps me keep track of my Public IP address. The script is a simple call and then logs the resutls.
 #
-## (c) Copyright 2014-03-29 Tim Beeler. All Rights Reserved. 
-# 
+## (c) Copyright 2014-03-29 Tim Beeler. All Rights Reserved.
+#
 ## ☠ This script or scripts embedded imply no warranty or safety to files, hardware, or self. Use at your own risk ☠
 
-timeStamp=$(date -j "+%h.%d %H:%M")
-address=$(echo $(curl -s http://ipwhats.appspot.com/))
-file=/Users/tim/Dropbox/tim/Documents/ipv6/lastcontact.txt
-who=$(hostname)
+#User Variables
+FILE="/Users/tim/Dropbox/tim/Documents/ipv6/lastcontact.txt"
 
+#Dynamic Variables, do not need to be adjusted
+TIMESTAMP=$(date -j "+%h.%d %H:%M")
+WHO=$(hostname)
 
-echo $timeStamp $who is @: $address >> $file
-exit
+#Get my ip address
+ADDRESS=$(echo $(curl -s http://ipwhats.appspot.com/))
+
+#Record the IP
+printf "$TIMESTAMP $WHO is @: $ADDRESS \n" >> $FILE
+
+exit 0

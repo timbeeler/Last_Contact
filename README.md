@@ -3,7 +3,7 @@
 
 <p>This script was created to log my public IP for refrence</p>
 
-<p>It grabs your public IP from http://ipwhats.appspot.com, and logs it to a file saved on Dropbox</p>
+<p>It grabs your public IP from opendns and logs it to a file saved on Dropbox</p>
 =======
 
 <h3>Script Variables </h3>

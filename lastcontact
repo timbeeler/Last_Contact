@@ -16,7 +16,7 @@ TIMESTAMP=$(date -j "+%h.%d %H:%M")
 WHO=$(hostname)
 
 #Get my ip address
-ADDRESS=$(echo $(curl -s http://ipwhats.appspot.com/))
+ADDRESS=$(echo $(dig +short myip.opendns.com @resolver1.opendns.com))
 
 #Record the IP
 printf "$TIMESTAMP $WHO is @: $ADDRESS \n" >> $FILE
